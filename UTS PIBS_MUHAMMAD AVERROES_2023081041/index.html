@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Averroes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <header>
+            <h2><img src="Fotoverro.jpg" alt="Fotoverro" width="80" height="100"> Muhammad Averroes</h2>
+        </header>
+        
+        <div class="content">
+            <nav>
+                <ul>
+                    <li><a href="#" data-section="biodata">Biodata</a></li><br>
+                    <li><a href="#" data-section="pendidikan">Pendidikan</a></li><br>
+                    <li><a href="#" data-section="pengalaman">Pengalaman</a></li><br>
+                    <li><a href="#" data-section="keahlian">Keahlian</a></li><br>
+                    <li><a href="#" data-section="publikasi">Publikasi</a></li><br>
+                </ul>
+            </nav>
+            
+            <section id="content-section">
+                <article id="biodata">
+                    <h1><u>Biodata</u></h1>
+                    <p><strong>Nama:</strong> Muhammad Averroes</p>
+                    <p><strong>Nim:</strong> 2023081041</p>
+                    <p><strong>Prodi:</strong> Sif</p>
+                    <p><strong>Tanggal Lahir:</strong> 14/05/01</p>
+                    <p><strong>Jenis Kelamin:</strong> Pria</p>
+                    <p><strong>Agama:</strong> Islam</p>
+                    <p><strong>Alamat:</strong> BSD</p>
+                </article>
+
+                <article id="pendidikan" class="hidden">
+                    <h1><u>Pendidikan</u></h1>
+                    <p><strong>SMA:</strong> Sekolah Inonesia Cairo</p>
+                    <p><strong>Kuliah:</strong> Universitas Pembangunan Jaya</p>
+                </article>
+
+                <article id="pengalaman" class="hidden">
+                    <h1><u>Pengalaman</u></h1>
+                    <p><Strong>Persatuan Pelajar Mahasiswa Indonesia Mesir</Strong> (2022-2023)</p>
+                    <p><strong>Bagian:</strong> Mentri Dalam Negeri</p>
+                    <br>
+                    <p><Strong>Radio PPMI Mesir</Strong> (2022-2023)</p>
+                    <p><strong>Bagian:</strong> Media</p>
+                    <br>
+                    <p><Strong>Panitia Wisuda PPMI Mesir</Strong> (2022)</p>
+                    <p><strong>Bagian:</strong> Publikasi</p>
+                </article>
+
+                <article id="keahlian" class="hidden">
+                    <h1><u>Keahlian</u></h1>
+                    <p><strong>Soft Skills: </strong>Independent, Problem-Solving, Critical Thinking, Adaptability</p>
+                    <br>
+                    <p><Strong>Hard Skills: </Strong>HTML, CSS, JavaScript, Java, SQL, Python, UI/UX Design</p>
+                </article>
+
+                <article id="publikasi" class="hidden">
+                    <h1><u>Publikasi</u></h1>
+                    <p>Content untuk Publikasi.</p>
+                </article>
+            </section>
+
+            <aside>
+                <h1><u>Hobi</u></h1>
+                <ul>
+                    <li>Traveling</li>
+                    <li>Film Making</li>
+                    <li>Swimming</li>
+                    <li>Cycling</li>
+                </ul>
+            </aside>
+        </div>
+
+        <footer>
+            <div class="social">
+                <a href="https://www.facebook.com/muhammad.averroes.58">Facebook</a>
+                <a href="https://github.com/Maverroes/">Github</i></a>
+                <a href="https://www.instagram.com/m.averroes/">Instagram</a>
+            </div>
+            <p>&copy; 2024 My Profile. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript placed here -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll("nav ul li a");
+            const articles = document.querySelectorAll("section article");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    
+                    // Hide all articles
+                    articles.forEach(article => {
+                        article.classList.add("hidden");
+                    });
+                    
+                    // Show the clicked section
+                    const sectionId = this.getAttribute("data-section");
+                    document.getElementById(sectionId).classList.remove("hidden");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
